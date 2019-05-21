@@ -11,4 +11,5 @@ public class Reader extends Member {
         System.out.printf("R  ");
         super.print();
     }
+
 }
