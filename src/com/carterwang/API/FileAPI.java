@@ -1,6 +1,5 @@
-package com.carterwang.FileService;
+package com.carterwang.API;
 
-import com.carterwang.Model.ThreadData;
 import com.carterwang.ReaderWriter.Member;
 import com.carterwang.ReaderWriter.Reader;
 import com.carterwang.ReaderWriter.Writer;
@@ -26,7 +25,7 @@ public class FileAPI {
             BufferedReader reader = new BufferedReader(in);
             String line;
             while((line = reader.readLine()) != null) {
-                Member member = getDataFromLine(line);
+                Member member = getMemberFromLine(line);
                 list.add(member);
             }
         } catch (IOException e) {
@@ -35,7 +34,7 @@ public class FileAPI {
         return list;
     }
 
-    private static Member getDataFromLine(String line) {
+    private static Member getMemberFromLine(String line) {
         String[] result = line.split("\\s+");
         switch (result[1]) {
             case "R":

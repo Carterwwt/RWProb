@@ -1,6 +1,8 @@
 package com.carterwang.ReaderWriter;
 
 public class Member {
+    protected boolean hasRequired = false;
+
     private int index;
     private int startTime;
     private int timeInterval;
@@ -11,6 +13,10 @@ public class Member {
         this.timeInterval = timeInterval;
     }
 
+    public int getIndex() {
+        return index;
+    }
+
     public int getStartTime() {
         return startTime;
     }
@@ -19,8 +25,9 @@ public class Member {
         return timeInterval;
     }
 
+
     public void print() {
-        System.out.printf("startTime: %d  timeInterval: %d\n",getStartTime(),getTimeInterval());
+        System.out.printf("     %d        %2d           %2d\n",getIndex(),getStartTime(),getTimeInterval());
     }
 
 }
